@@ -1,0 +1,54 @@
+.theme-dark {
+  --background-color: #262626;
+  --infected: rgb(44, 158, 245);
+  --death: rgb(238, 82, 82);
+  --recovered: rgb(69, 223, 38);
+}
+
+.theme-light {
+  --background-color: #fdfdfd;
+  --infected: rgb(13, 98, 163);
+  --death: rgb(242, 63, 63);
+  --recovered: rgb(49, 158, 27);
+}
+
+.card-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.198);
+  padding: 3em 4em;
+  text-align: center;
+  background-color: var(--background-color);
+}
+
+.card.infected {
+  border-bottom: 3px solid var(--infected);
+  color: var(--infected);
+}
+
+.card.death {
+  border-bottom: 3px solid var(--death);
+  color: var(--death);
+}
+
+.card.recovered {
+  border-bottom: 3px solid var(--recovered);
+  color: var(--recovered);
+}
+
+.time-info {
+  font-weight: 300;
+  text-align: center;
+  margin-top: 2.7em;
+}
+
+@media (max-width: 536px) {
+  .card-box {
+    flex-direction: column;
+    gap: 3em;
+  }
+}
